@@ -1,0 +1,52 @@
+body{
+    background-color: lightgray;
+}
+
+#testImg {
+    width: 175px;
+    height: 175px;
+    position: absolute;
+    top: 120px;
+    right: 175px;
+    background-color: aqua;
+}
+
+.pageBox{
+    margin: 20px 150px 20px 150px;
+    border: 3px solid white;
+    min-height: 500px;
+    /* border-radius: 3% 3% 0% 0%; */
+} 
+
+.pageBox header {
+    background-color: grey;
+    height: 60px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.pageBox header h1 {
+    height: 100%;
+}
+
+.innerDiv {
+    padding: 0px 15px 15px 15px;
+}
+
+.innerDiv p, li {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#contactLine {
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#contactLine a {
+    text-decoration: none;
+}
+
+#contactLine a:hover {
+    color:green;
+}
