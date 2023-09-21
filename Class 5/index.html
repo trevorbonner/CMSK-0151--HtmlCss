@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Resume</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+        <style>
+            html, body{
+                height:100%
+            }
+
+            header, footer {
+                width:100%;        
+                z-index: 1;     
+            }
+
+            section {
+                width: 100%;
+                top: 20%;
+                bottom: 10%;
+                overflow: auto;
+                position: absolute;
+            }
+
+            .containerSection {
+                height:100%;
+                z-index: 0;
+            }
+
+            footer {
+                bottom: 0px;
+                background-color: rgb(199, 197, 197);
+                height: 10%;
+                opacity: 75%;
+                padding: 10px;
+                position: absolute;
+            }
+
+            header {
+                top: 0px;
+                height: 20%;
+                background-color: rgb(82, 146, 82);
+                color:white;
+                padding: 15px;
+                position: absolute;
+                opacity: 100%;
+            }
+
+            .borderSection {
+                padding: 10px;
+                margin: 10px;
+                border-radius: 2.5%;
+                border: 1.5px solid gray;
+                height: 100%;
+                /* offset-x | offset-y | blur-radius | color */
+                box-shadow: 5px 5px 5px lightgrey;
+            }
+
+            .experienceRow {
+                font-weight: bold;
+                color:green;
+            }
+
+            .subHeader {
+                background-color: lightgreen;
+                color: red;
+            }
+
+            td, th {
+                padding: 3px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <header class="container-fluid">
+            <div class="text-center">
+                <div class="row">
+                    <h1>Trevor Bonner</h1>      
+                    <ul class="list-inline" style="margin: 20px;">
+                        <li class="list-inline-item">&bull; Phone: (123)456-7890</li>
+                        <li class="list-inline-item">&bull; City: Edmonton</li>
+                        <li class="list-inline-item">&bull; Address: 111 Something Ave</li>
+                        <li class="list-inline-item">&bull; Postal Code: 1w1 2x2</li>
+                      </ul>
+                  </div>
+            </div>
+        </header>
+
+        <section>
+            <div class="container containerSection">
+                <div class="row">
+                    <div class="col-sm-12" style="padding: 10px;">
+                        <h3>Profile</h3>
+                        <p>
+                            Trevor has nine years of experience in software development. He has significant expertise in the full release cycle of software and working with features, and solutions from planning stages, development, documentation, and post release support.
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class=" borderSection col-sm-7">
+                        <h3>Experience</h3>
+                        <ol>
+                            <li class="experienceRow">Software Developer, CGI Edmonton AB 2016-Now</li>
+                        </ol>
+                        <p>
+                            Working at CGI I worked on several different projects both with ADS and AMS. On the ADS projects my responsibilities beyond working on Tasks, and User Stories to specification included:
+                            <ul>
+                                <li>Managing a User Stories on a Kanban board for iterations</li>
+                                <li>Managing TFS Repository and configuring Continuous Integration Build Definitions</li>
+                                <li>Assigning user stories and task to more Junior developers</li>
+                                <li>Assisting other developers and code reviews</li>
+                                <li>Meeting with the business to help solution as well as with screen mock-ups</li>
+                                <li>Design, architect, and develop new Web API services using .Net Core along with corresponding database tables and stored procedures</li>
+                            </ul>
+                            On AMS projects I worked on defects, enhancements, and small to mid sized features to specifications. Defects would frequently require me to go over Audits, Database rows, and other logs to find appropriate errors and stack traces to find out the root cause of a problem. Once identified I was then responsible for performing any relevant impact assessments, code changes, and documentation. Release work I would frequently be the one doing performance, and vulnerability testing using a range of tools including Coded UI, Visual Studio Web Load testing, and Performance monitors. Recently I have also had the role of Configuration Manager for one of our Enterprise applications, performing releases from development to production.
+                        </p>
+                    </div>
+                    <div class="col-sm-1">
+                        
+                    </div>
+                    <div class=" borderSection col-sm-4">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h3>Qualifications</h3>
+                                <p>Full Stack Software Development, Angular Development. Cloud and Container based Development</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h3>Tools &amp; software</h3>
+                                <p>Visual Studio, Visual Studio Code, Eclipse, PHP Storm, SQL Server Management Studio, Git, Azure Devops, OpenShift, Azure, AD FS</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h3>Environments</h3>
+                                <p>On-Premises, Azure, OpenShift Containers</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h3>Languages</h3>
+                                <p>C#, PHP, javascript, html, WPF, TypeScript, Angular JS</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h3>Skill Summary</h3>
+                        <table class="table-striped table-bordered">
+                            <thead>
+                                <tr>
+                                    <th style="width: 40%;">Skill</th>
+                                    <th style="width: 30%;">Number of years</th>
+                                    <th style="width: 30%;">Last Used</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td colspan="3" class="subHeader">Teachnical Skills</td>                                   
+                                </tr>
+                                <tr>
+                                    <td>C#</td>
+                                    <td>9</td>
+                                    <td>2023</td>
+                                </tr>
+                                <tr>
+                                    <td>SQL</td>
+                                    <td>8</td>
+                                    <td>2023</td>
+                                </tr>
+                                <tr>
+                                    <td>HTML</td>
+                                    <td>8</td>
+                                    <td>2023</td>
+                                </tr>
+                                <tr>
+                                    <td>Java Script</td>
+                                    <td>7</td>
+                                    <td>2023</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" class="subHeader">Application knowledge</td>                                   
+                                </tr>
+                                <tr>
+                                    <td>Visual Studio</td>
+                                    <td>9</td>
+                                    <td>2023</td>
+                                </tr>
+                                <tr>
+                                    <td>SQL Server Management Studio</td>
+                                    <td>8</td>
+                                    <td>2023</td>
+                                </tr>
+                                <tr>
+                                    <td>Git</td>
+                                    <td>5</td>
+                                    <td>2023</td>
+                                </tr>
+                                <tr>
+                                    <td>Azure</td>
+                                    <td>3</td>
+                                    <td>2023</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>    
+        <footer class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12"><p>Contact me: <a href="">bonnert4@macewan.ca</a></p></div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12"><p>&copy;2023</p></div>
+            </div>
+        </footer>
+    </body>
+</html>
