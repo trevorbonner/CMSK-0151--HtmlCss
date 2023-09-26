@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Resume</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+        <style>
+            html, body{
+                height:100%
+            }
+
+            header, footer {
+                width:100%;        
+            }
+
+            header li a{
+                color: white;
+                
+            }
+
+            header li, footer li {
+                display: inline;
+                margin: 0px 5px 0px 5px;
+            }
+
+            .gridCol {
+                border: 1px solid blue;
+                background-color: Grey;
+                height: 25px;
+            }
+
+            section {
+                width: 100%;
+                top: 20%;
+                bottom: 10%;
+                overflow: auto;
+                position: absolute;
+                margin-top: 10px;
+            }
+
+            .containerSection {
+                border: 1px solid black;
+                border-radius: 2.5%;
+                padding: 10px;
+                height: 100%;
+            }
+
+            footer {
+                bottom: 0px;
+                background-color: rgb(199, 197, 197);
+                height: 10%;
+                opacity: 75%;
+                padding: 10px;
+                position: absolute;
+                background-color: #333;
+                color: #fff;
+            }
+
+            header {
+                top: 0px;
+                height: 20%;
+                background-color: rgb(82, 146, 82);
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                padding: 15px;
+                position: absolute;
+                background-image:url("data:image/jpeg;base64,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");
+            }
+
+            footer p{
+                font-size: 14px;
+            }
+
+            footer ul{
+                margin-top: 10px;
+            }
+
+            footer ul li {
+                margin-right: 10px;
+            }
+
+            footer li a{
+                color: #fff
+            }
+
+        </style>
+        <style>
+            .modalSection {
+                z-index: 100;
+            }
+
+            .modalBackground {
+                background-color: slategrey;
+                opacity: 60%;
+                z-index: 99;
+                margin-top: -10px;
+            }
+
+            #contactForm {
+                background-color: white;
+                margin:10px;
+                padding: 10px;
+                opacity: 100%;
+                width: 700px;
+            }
+        </style>
+        <script>
+            $(document).ready(function() {
+
+                $('.contactButton').click(() =>
+                {
+                    $('.modalBackground').show();
+                    $('.modalSection').show();
+                });
+
+                $('#closeModal').click(() => {
+                    $('.modalBackground').hide();
+                    $('.modalSection').hide();
+                    clearForm();
+                })
+
+                function clearForm()
+                {
+                    $('#firstName').val('');
+                    $('#lastName').val('');
+                    $('#emailAddress').val('');
+                    $('#phone').val('');
+                }
+            });
+        </script>
+    </head>
+    <body>
+        <header class="container-fluid">
+            <div class="text-center">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <h1 class="text-white"><a href="">Your logo here</a></h1>
+                    </div>
+                    <div class="col-sm-9 text-right">
+                        <ul>
+                            <li><a href="">Home</a></li>
+                            <li><a href="">Blog</a></li>
+                            <li><a href="">About</a></li>
+                            <li><a href="#" class="contactButton">Contact</a></li>
+                        </ul>
+                    </div>
+                  </div>
+            </div>
+        </header>
+
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-9">
+                        <div class="containerSection">
+                            <h4>Grid Classes</h4>
+                            <p>The Bootstrap grid system has four classes:
+                                <ul>
+                                    <li>
+                                        xs (for phones - screens less than 768px wide)
+                                    </li>
+                                    <li>
+                                        sm (for tablets - screens equal to or greater than 768px wide)
+                                    </li>
+                                    <li>
+                                        md (for small laptops - screens equal to or greater than 992px wide)
+                                    </li>
+                                    <li>
+                                        lg (for laptops and desktops - screens equal to or greater than 1200px wide)
+                                    </li>
+                                </ul>
+                            </p>
+                            <div class="row" style="margin: 5px;">
+                                <div class="gridCol col-sm-1"></div>
+                                <div class="gridCol col-sm-1"></div>
+                                <div class="gridCol col-sm-1"></div>
+                                <div class="gridCol col-sm-1"></div>
+                                <div class="gridCol col-sm-1"></div>
+                                <div class="gridCol col-sm-1"></div>
+                                <div class="gridCol col-sm-1"></div>
+                                <div class="gridCol col-sm-1"></div>
+                                <div class="gridCol col-sm-1"></div>
+                                <div class="gridCol col-sm-1"></div>
+                                <div class="gridCol col-sm-1"></div>
+                                <div class="gridCol col-sm-1"></div>
+                            </div>
+                            <div class="row" style="margin: 5px;">
+                                <div class="gridCol col-sm-2"></div>
+                                <div class="gridCol col-sm-2"></div>
+                                <div class="gridCol col-sm-2"></div>
+                                <div class="gridCol col-sm-2"></div>
+                                <div class="gridCol col-sm-2"></div>
+                                <div class="gridCol col-sm-2"></div>
+                            </div>
+                            <div class="row" style="margin: 5px;">
+                                <div class="gridCol col-sm-3"></div>
+                                <div class="gridCol col-sm-3"></div>
+                                <div class="gridCol col-sm-3"></div>
+                                <div class="gridCol col-sm-3"></div>
+                            </div>
+                            <div class="row" style="margin: 5px;">
+                                <div class="gridCol col-sm-4"></div>
+                                <div class="gridCol col-sm-4"></div>
+                                <div class="gridCol col-sm-4"></div>
+                            </div>
+                            <div class="row" style="margin: 5px;">
+                                <div class="gridCol col-sm-6"></div>
+                                <div class="gridCol col-sm-6"></div>
+                            </div>
+                            <div class="row" style="margin: 5px;">
+                                <div class="gridCol col-sm-12"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="sidebar containerSection">
+                            <h3>Navigation:</h3>
+                            <ul>
+                                <li><a href="">Navigation 1</a></li>
+                                <li><a href="">Navigation 2</a></li>
+                                <li><a href="">Navigation 3</a></li>
+                                <li><a href="">Navigation 4</a></li>
+                                <li><a href="">Navigation 5</a></li>
+                                <li><a href="">Navigation 6</a></li>
+                            </ul>
+                        </div>
+                    </div>                
+                </div>
+            </div>
+        </section>  
+        
+        <section class="modalBackground" style="display: none;"></section>
+        <section class="modalSection" style="display: none;">
+            <div class="container d-flex justify-content-center">               
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div>
+                            <form id="contactForm">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <label for="firstName">First Name:</label>
+                                        <input type="text" id="firstName" name="firstName"/>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label for="lastName">Last Name:</label>
+                                        <input type="text" id="lastName" name="lastName"/>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <label for="emailAddress">Email Address:</label>
+                                        <input type="text" id="emailAddress" name="emailAddress"/>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label for="phone">Phone Number:</label>
+                                        <input type="text" id="phone" name="phone"/>
+                                    </div>
+                                </div>
+                                <br>
+                                <br>
+                                <div class="row">
+                                    <div class="col-sm-8"></div>
+                                    <div class="col-sm-4">
+                                        <button id="submitForm" class="btn btn-primary" type="submit">Submit</button>
+                                        <button id="closeModal" class="btn btn-secondary">Close</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="container-fluid">
+            <div class="container">
+                <ul>
+                    <li><a href="">About</a></li>
+                    <li><a href="#" class="contactButton">Contact</a></li>
+                    <li><a href="">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </footer>        
+    </body>
+</html>
